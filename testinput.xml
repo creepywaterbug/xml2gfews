@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<filters version="1.1">
+<defaultFilterId>DADIDA</defaultFilterId>
+<timeSeriesSets id="Set1">
+<timeSeriesSet>
+<moduleInstanceId>ImportA</moduleInstanceId>
+<valueType>scalar</valueType>
+<parameterId>parA</parameterId>
+<locationSetId>TRE_waterstand</locationSetId>
+<timeSeriesType>external historical</timeSeriesType>
+<timeStep multiplier="3" unit="minute"/>
+<relativeViewPeriod end="0" start="-14" unit="day"/>
+<readWriteMode>read only</readWriteMode>
+<synchLevel>1</synchLevel>
+</timeSeriesSet>
+<timeSeriesSet>
+<moduleInstanceId>ImportA</moduleInstanceId>
+<valueType>scalar</valueType>
+<parameterId>parB</parameterId>
+<locationSetId>TRE_niveau</locationSetId>
+<timeSeriesType>external historical</timeSeriesType>
+<timeStep multiplier="3" unit="minute"/>
+<relativeViewPeriod end="0" start="-14" unit="day"/>
+<readWriteMode>read only</readWriteMode>
+<synchLevel>1</synchLevel>
+</timeSeriesSet>
+<timeSeriesSet>
+<moduleInstanceId>ImportA</moduleInstanceId>
+<valueType>scalar</valueType>
+<parameterId>parB.dag</parameterId>
+<locationSetId>TRE_niveau_dag</locationSetId>
+<timeSeriesType>external historical</timeSeriesType>
+<timeStep unit="nonequidistant"/>
+<relativeViewPeriod end="0" start="-14" unit="day"/>
+<readWriteMode>read only</readWriteMode>
+<synchLevel>1</synchLevel>
+</timeSeriesSet>
+</timeSeriesSets>		
+<timeSeriesSets id="Set2">
+<timeSeriesSet>
+<moduleInstanceId>ImportB</moduleInstanceId>
+<valueType>scalar</valueType>
+<parameterId>parA</parameterId>
+<locationSetId>TRE_waterstand</locationSetId>
+<timeSeriesType>external historical</timeSeriesType>
+<timeStep multiplier="3" unit="minute"/>
+<relativeViewPeriod end="0" start="-14" unit="day"/>
+<readWriteMode>editing visible to all future task runs</readWriteMode>
+<synchLevel>5</synchLevel>
+</timeSeriesSet>
+<timeSeriesSet>
+<moduleInstanceId>ImportB</moduleInstanceId>
+<valueType>scalar</valueType>
+<parameterId>parB</parameterId>
+<locationSetId>TRE_niveau</locationSetId>
+<timeSeriesType>external historical</timeSeriesType>
+<timeStep multiplier="3" unit="minute"/>
+<relativeViewPeriod end="0" start="-14" unit="day"/>
+<readWriteMode>editing visible to all future task runs</readWriteMode>
+<synchLevel>5</synchLevel>
+</timeSeriesSet>
+<timeSeriesSet>
+<moduleInstanceId>ImportB</moduleInstanceId>
+<valueType>scalar</valueType>
+<parameterId>parB.dag</parameterId>
+<locationSetId>TRE_niveau_dag</locationSetId>
+<timeSeriesType>external historical</timeSeriesType>
+<timeStep unit="nonequidistant"/>
+<relativeViewPeriod end="0" start="-14" unit="day"/>
+<readWriteMode>editing visible to all future task runs</readWriteMode>
+<synchLevel>5</synchLevel>
+</timeSeriesSet>
+</timeSeriesSets>
+<filter id="ABCD" name="EFGHI">
+<timeSeriesSet>
+<moduleInstanceId>ImportD</moduleInstanceId>
+<valueType>scalar</valueType>
+<parameterId>parC</parameterId>
+<locationSetId>locC</locationSetId>
+<timeSeriesType>external historical</timeSeriesType>
+<timeStep unit="nonequidistant"/>
+<relativeViewPeriod end="0" start="-30" unit="day"/>
+<readWriteMode>editing visible to all future task runs</readWriteMode>
+<synchLevel>5</synchLevel>
+</timeSeriesSet>
+<timeSeriesSet>
+<moduleInstanceId>ImportD</moduleInstanceId>
+<valueType>scalar</valueType>
+<parameterId>parD</parameterId>
+<locationSetId>locD</locationSetId>
+<timeSeriesType>external historical</timeSeriesType>
+<timeStep unit="nonequidistant"/>
+<relativeViewPeriod end="0" start="-30" unit="day"/>
+<readWriteMode>editing visible to all future task runs</readWriteMode>
+<synchLevel>5</synchLevel>
+</timeSeriesSet>
+<timeSeriesSet>
+<moduleInstanceId>ImportC</moduleInstanceId>
+<valueType>scalar</valueType>
+<parameterId>parE</parameterId>
+<locationSetId>locE</locationSetId>
+<timeSeriesType>external historical</timeSeriesType>
+<timeStep unit="nonequidistant"/>
+<relativeViewPeriod end="0" start="-30" unit="day"/>
+<readWriteMode>editing visible to all future task runs</readWriteMode>
+<synchLevel>5</synchLevel>
+</timeSeriesSet>
+<timeSeriesSet>
+<moduleInstanceId>ImportD</moduleInstanceId>
+<valueType>scalar</valueType>
+<parameterId>parF</parameterId>
+<locationSetId>locF</locationSetId>
+<timeSeriesType>external historical</timeSeriesType>
+<timeStep unit="nonequidistant"/>
+<relativeViewPeriod end="0" start="-60" unit="day"/>
+<readWriteMode>editing visible to all future task runs</readWriteMode>
+<synchLevel>5</synchLevel>
+</timeSeriesSet>
+<timeSeriesSet>
+<moduleInstanceId>ImportD</moduleInstanceId>
+<valueType>scalar</valueType>
+<parameterId>parG</parameterId>
+<locationSetId>locG</locationSetId>
+<timeSeriesType>external historical</timeSeriesType>
+<timeStep unit="nonequidistant"/>
+<relativeViewPeriod end="0" start="-30" unit="day"/>
+<readWriteMode>editing visible to all future task runs</readWriteMode>
+<synchLevel>5</synchLevel>
+</timeSeriesSet>
+</filter>
+</filters>
