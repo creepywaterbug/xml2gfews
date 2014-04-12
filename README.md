@@ -1,16 +1,16 @@
 ### xml2GFEWS
-groovyFEWS is made by flowmatters to offer a better / easier way to maintain the configuration files of Delf-FEWS. groovyFEWS is using Helper files to do this. The problem is when you have an existing FEWS (xml) configuration you need to convert this to groovyFEWS code. The uncompile functin of groovyFEWS can not take the settings of Helper files in consideration to smartly construct the groovyFEWS code.
+[groovyFEWS](www.github.com/flowmatters/groovyfews) is made by [flowmatters](www.github.com/flowmatters) to offer a better / easier way to maintain the configuration files of [Delf-FEWS](http://www.deltares.nl/en/software/479962/delft-fews). groovyFEWS is using Helper files to do this. The problem is when you have an existing FEWS (xml) configuration you first need to convert this to groovyFEWS code. The uncompile functin of groovyFEWS is not aware of Helper files and cannot smartly construct the groovyFEWS code.
 
 xml2GFEWS is a python script which is converting FEWS (xml) configuration into groovyFEWS code in which it both creates the needed helper file and the regular groovy code which is pointing to the helper files. Well this is probably a bit overstated. At this moment xml2GFEWS is only able to create one kind of Helper yet. This helper is organizing default values out of the tags under the 'timeSeriesSet' and 'timeSeriesSets' tags.
 
 ### Operation
 You need to install python and sqlite on your system. You also need the python libraries python-pysqlite2 and python-lxml. Put the xml configuration file you want to be converted in the same working directory as you put xml2GEWS.py. Edit xml2GEWS.py to change the names of the in- and output files. 
 
-*python xml2GFEWS.py*
+<code>python xml2GFEWS.py<code>
 
 This will create a regular groovy file and a helper groovy file. I hope the example code underneath is clear enough to illustrates what is actually happening.
 
-*Input: FEWS xml*
+**Input: FEWS xml**
 ~~~xml
 <?xml version="1.0" encoding="UTF-8"?>
 <filters version="1.1">
@@ -144,7 +144,7 @@ This will create a regular groovy file and a helper groovy file. I hope the exam
 	</filter>
 </filters>
 ~~~
-*Output: Helper groovy file*
+**Output: Helper groovy file**
 ~~~groovy
 static def tss_default(Map map,d) {
 	def defaults= [
@@ -190,7 +190,7 @@ static def tss_None(Map map,d) {
 	]
 	tss_default(None_params + map,d)
 ~~~
-*Output: Regular groovy file*
+**Output: Regular groovy file**
 ~~~groovy
 import static GroovyFewsHelpers.*
 import groovy.xml.StreamingMarkupBuilder
